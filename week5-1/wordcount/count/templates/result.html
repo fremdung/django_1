@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단어 수 세기 결과 값 출력</title>
+    {% comment %} 
+    <style type='text/css'>
+        h1{color:rebecapuplle;}
+        h3{color:rebecapuplle;}
+    </style> 
+    {% endcomment %}
+
+</head>
+
+  <body>
+
+    <h1> Entire "{{textcount}}". </h1>
+    <h3> input Text </h3>
+    <h2> {{text}} </h2>
+    <h3> Word Count </h3>
+    {% for key , value in dic.items %}
+        <div>
+            <h4> {{key}}:{{value}}</h4>
+        </br>
+    </div>
+    {% endfor %}
+    <a href="{% url 'home' %}" style="color:rebeccapurple"> try again </a>
+  </body>
+</html>
